@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.pruebasfirebasekotlin.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <!--Acá indicamos que cuando le den atras debe volver hasta el login y eliminarlo de la pila-->
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.pruebasfirebasekotlin.ui.register.RegisterFragment"
+        android:label="REGISTER"
+        tools:layout="@layout/fragment_register" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.pruebasfirebasekotlin.ui.main.MainFragment"
+        android:label="HOME"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_pruebaFragment"
+            app:destination="@id/pruebaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pruebaFragment"
+        android:name="com.example.pruebasfirebasekotlin.ui.PruebaFragment"
+        android:label="fragment_prueba"
+        tools:layout="@layout/fragment_prueba" />
+
+</navigation>

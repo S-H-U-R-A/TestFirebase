@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pruebas Firebase Kotlin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">username</string>
+    <string name="required">Requerido</string>
+    <string name="password">password</string>
+    <string name="register">Registrarse</string>
+    <string name="positiveButtonInfo">Ok</string>
+    <string name="login">Iniciar sesión</string>
+</resources>
